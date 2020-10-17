@@ -12,9 +12,11 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light:#fff;
-    --clr-dark: #303030;
-    --clr-accent: #93BFB8;
+    --clr-light: #000;
+    ;
+    --clr-dark: #fac5c6;
+    --clr-accent:#ed2024;
+    --clr-white: #ffffff;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -42,7 +44,7 @@ html {
 
 body {
     background: var(--clr-light); 
-    color: var(--clr-dark);
+    color: var(--clr-white);
     font-family: var(--ff-primary);
     line-height: 1.6;
      overflow-x: hidden;
@@ -243,13 +245,18 @@ header {
     box-shadow: var(--bs);
 }
 
+.portfolio_intro_image {
+    box-shadow: var(--bs);
+    /* width: 50%; */
+}
+
 .portfolio_image {
-    width: 80%;
+    width: 90%;
     margin: auto;
     box-shadow: var(--bs);
 }
 
-@media(min-width: 600px) {
+@media(min-width: 800px) {
     .intro {
         display: grid;
         grid-column-gap: 1em;
@@ -274,6 +281,11 @@ header {
         position: relative;
         left: -1.5em;
         width:  calc(100% + 1.5em);
+    }
+    .portfolio_intro_image {
+        width: 50%;
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -395,6 +407,8 @@ header {
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
+        width: 400px;
+        height: 300px;
 }
 
 .portfolio_item:focus {
@@ -413,7 +427,7 @@ header {
     background: #111;
     color: var(--clr-accent);
     text-align: center;
-    padding: 2.5em 0;
+    padding: 1em 0;
     font-size: var(--fs-h3);
 }
 
@@ -439,7 +453,7 @@ header {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0 0;
+    margin: 1em 0 0;
     padding: 0;
 }
 
@@ -462,4 +476,9 @@ header {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.about-me p {
+    font-family: 'Source Code Pro';
+    font-size: 1.1em;
 }
