@@ -14,6 +14,13 @@ app.get('/', function (req, res) {
     })
   })
 
+  app.get('/portfolio-item', function (req, res) {
+    res.render('portfolio-item', {
+        title: "portfolio-item"
+    })
+  })
+
+
 app.get('/about', function (req, res) {
     res.send('<h1> Hello World from About page - TEST </h1>')
   })
