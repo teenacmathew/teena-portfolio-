@@ -110,10 +110,11 @@ app.get('/', function (req, res) {
     })
   })
 
-app.get('/about', function (req, res) {
+app.get('/contact', function (req, res) {
     res.send('<h1> Hello World from About page - TEST </h1>')
   })
      
-app.listen(3000, () => {
+var port = process.env.PORT || 3000;
+app.listen(port, "0.0.0.0", () => {
     console.log("The server is running in port 3000");
  })
